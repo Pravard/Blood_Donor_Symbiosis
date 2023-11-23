@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/des.css') }}">
+    </head>
+    <body>
+        <form action="/doc">
+            <input type="submit" value="Enter Doctor">
+        </form>
+        <br/>
+        <br/>
+        <form action="/docs">
+            <input type="submit" value="Doctor List">
+        </form>
+        <br/>
+        <br/>
+        <form action="/blood">
+            <input type="submit" value="Blood Stock">
+        </form>
+        <br/>
+        <br/>
+        <form action="/donors">
+            <input type="submit" value="Donor List" >
+        </form>
+    </body>
+</html>

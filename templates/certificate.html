@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Certificate Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .jumbotron {
+            background-color: #28A745;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div style=" top: 10px;left:10px;background-color: black;border-radius: 5px;width: 7%;text-align: center;text-justify: auto;vertical-align: middle;"><a href="/" style="color: white;font-size: large;">Back</a></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Donor Certificate</h5>
+                        <!-- Donor Certificate Form -->
+                        <form class="certificate-form" action="/certificate_view" method="post">
+                            <div class="form-group">
+                                <label for="donorId">Donor ID</label>
+                                <input type="text" class="form-control" id="donorId" placeholder="Enter Donor ID (format N000)" required name="did" pattern="[N][0-9]{3}">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Generate Certificate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--<script>
+        function generateCertificate() {
+            var donorId = document.getElementById("donorId").value;
+            window.location.href = "certificate_view.html?donorId=" + donorId;
+        }
+    </script>-->
+</body>
+</html>
+

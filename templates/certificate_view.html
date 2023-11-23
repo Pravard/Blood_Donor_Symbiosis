@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Certificate</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .certificate {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border: 10px solid #db3131;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .certificate h2 {
+            color: #db3131;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .certificate p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .certificate #donorName {
+            font-size: 1.8em;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .certificate #certificateDonorId {
+            font-size: 1.4em;
+            color: #db3131;
+            font-weight: bold;
+        }
+
+        .certificate .signature {
+            margin-top: 40px;
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    {% if erm %}
+    <p>{{erm}}</p>
+    {% else %}
+    <div class="certificate">
+        <h2>Certificate of Blood Donation</h2>
+        <p>This certificate is presented to</p>
+        <h3 id="donorName">{{dons[1]}}</h3>
+        <p>For their generous contribution in donating blood.</p>
+        <p>Donor ID: <span id="certificateDonorId">{{dons[0]}}</span></p>
+        <p>Number of donations: <span id="certificateDonorId">{{tups[1]}}</span></p>
+        <p>Date of latest donation: <span id="certificateDonorId">{{dons[2]}}</span></p>
+        <p>Organisation: <span id="certificateDonorId">{{dons[3]}}</span></p>
+        <p>We extend our sincere thanks for your selfless act, which may save lives.</p>
+        <p>Thank you for being a lifesaver!</p>
+
+        <div class="signature">
+            <p>Authorized Signature</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <!--<script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var donorId = urlParams.get('donorId');
+
+        document.getElementById('certificateDonorId').innerText = donorId;
+    </script>-->
+</body>
+</html>
+
+

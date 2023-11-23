@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Bank</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles here */
+        .jumbotron {
+            /* background-image: url('/static/donor.jpg'); */
+            background-size: cover;
+            color: #FF0000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            background-image: url(/static/donor.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-danger justify-content-center">
+    <a class="navbar-brand" href="#">Blood Bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/organisations">Organisations</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Blood Bank</h1>
+    <p class="lead">Every Blood Donor is a Lifesaver.</p>
+</div>
+
+<!-- Cards Section -->
+<div class="container">
+    <div class="row">
+        <!-- Card 1: Doctor List -->
+        <div class="col-md-4">
+            <a href="/doctor_list" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Doctor List</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 2: Donor List -->
+        <div class="col-md-4">
+            <a href="/donor_list" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Donor List</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 3: Blood Request -->
+        <div class="col-md-4">
+            <a href="/blood_request" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Blood Request</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 4: Patient List -->
+        <div class="col-md-4">
+            <a href="/patient_list" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Patient List</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 5: New Patient -->
+        <div class="col-md-4">
+            <a href="/new_patient" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">New Patient</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 6: New Doctor -->
+        <div class="col-md-4">
+            <a href="/new_doctor" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">New Doctor</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 7: New Donation -->
+        <div class="col-md-4">
+            <a href="/new_donation" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">New Donation</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 8: Transfusion -->
+        <div class="col-md-4">
+            <a href="/transfusion" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Transfusion</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/certificate" class="card-link">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Certificate</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

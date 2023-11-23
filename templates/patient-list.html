@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles here */
+        .jumbotron {
+            background-color: #DC3545;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div style="position: sticky; top: 10px;left:10px;background-color: black;border-radius: 5px;width: 7%;text-align: center;text-justify: auto;vertical-align: middle;"><a href="/" style="color: white;font-size: large;">Back</a></div>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Patient List</h1>
+    </div>
+
+    <div class="container mt-4">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="hosp">Search by Hospital:</label>
+                <select class="form-control" id="hosp" name="hosp_n">
+                    {% for hosp in hosps %}
+                    <option value="{{hosp[1]}}">{{hosp[1]}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-danger">Search</button>
+        </form>
+
+        <table class="table mt-3">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Blood Group</th>
+                    <th>Age</th>
+                    <th>Doctor In-Charge</th>
+                    <th>Hospital</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pat in pats %}
+                <tr>
+                    <td>{{pat[0]}}</td>
+                    <td>{{pat[1]}}</td>
+                    <td>{{pat[2]}}</td>
+                    <td>{{pat[3]}}</td>
+                    <td>{{pat[4]}}</td>
+                    <td>{{pat[5]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

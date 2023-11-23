@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Donation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles here */
+        .jumbotron {
+            background-color: #28A745;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="position: sticky; top: 10px;left:10px;background-color: black;border-radius: 5px;width: 7%;text-align: center;text-justify: auto;vertical-align: middle;"><a href="/" style="color: white;font-size: large;">Back</a></div>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">New Donation</h1>
+    </div>
+    {% if msg %}
+    <div class="jumbotron text-center">
+        <br/>
+        <br/>
+        <h5 class="display-4">{{msg}}</h5>
+        <br/>
+        <br/>
+    </div>
+    {% else %}
+    {% endif %}
+    <div class="container mt-4">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="bloodID">Blood ID:</label>
+                <input type="text" class="form-control" id="bloodID" pattern="[B][0-9]{3}" placeholder="Enter in the format B000" name="b_id">
+            </div>
+            <div class="form-group">
+                <label for="donorID">Donor ID:</label>
+                <input type="text" class="form-control" id="donorID" pattern="[N][0-9]{3}" placeholder="Enter in the format N000" name="don_id">
+            </div>
+            <div class="form-group">
+                <label for="donor_name">Donor Name:</label>
+                <input type="text" class="form-control" id="donorName" name="don_name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="age" class="form-control" id="donorName" min="18" max="60" name="don_age">
+            </div>
+            <div class="form-group">
+                <label for="bloodGroup">Blood Group:</label>
+                <select class="form-control" id="bloodGroup" name="b_type">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="orgID">Organization ID:</label>
+                <input type="text" class="form-control" id="orgID" pattern="[O][R][G][0-9]{3}" placeholder="Enter in the format ORG000" name="org_id">
+            </div>
+            <div class="form-group">
+                <label for="donationDate">Date:</label>
+                <input type="date" class="form-control" id="donationDate" name="don_date">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

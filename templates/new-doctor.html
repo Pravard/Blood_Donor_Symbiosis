@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Doctor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles here */
+        .jumbotron {
+            background-color: #17A2B8;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div style="position: sticky; top: 10px;left:10px;background-color: black;border-radius: 5px;width: 7%;text-align: center;text-justify: auto;vertical-align: middle;"><a href="/" style="color: white;font-size: large;">Back</a></div>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">New Doctor</h1>
+    </div>
+
+    <div class="container mt-4">
+        <form action="#" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="doctorID">Doctor ID:</label>
+                    <input type="text" class="form-control" id="doctorID" pattern = "[D][0-9]{3}" name = "doctorID" placeholder="Enter in format D000">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="doctorName">Doctor Name:</label>
+                    <input type="text" class="form-control" id="doctorName" name="doctorName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="hospital">Hospital:</label>
+                <input type="text" class="form-control" id="hospital" name="hospID" pattern="[H][0-9]{3}" placeholder="Enter in format H000">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age_1" min="20" max="65">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    {% if msg %}
+    <br/>
+    <br/>
+    <div class="jumbotron text-center">
+        <h5 class="display-4">{{msg}}</h5>
+    </div>
+    {% else %}
+    {% endif %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
