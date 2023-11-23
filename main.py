@@ -9,13 +9,13 @@ app.secret_key = '97531'
 mydb = mysql.connector.connect(
     host = "localhost",
     user = "root",
-    password = "vard071002"
+    password = "Your_Password"
 )
 
 cursor = mydb.cursor()
 cursor.execute('USE Blood_Bank')
 
-# user data 
+# sample user data 
 users = {
     'user1': {'password': 'password1'},
     'user2': {'password': 'password2'},
